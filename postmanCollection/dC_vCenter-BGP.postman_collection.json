@@ -1,0 +1,630 @@
+{
+	"info": {
+		"_postman_id": "6cc5e124-2c3e-4f25-b9e6-012423b46d50",
+		"name": "dC_vCenter-BGP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45337239",
+		"_collection_link": "https://vibgyor-7720153.postman.co/workspace/vibgyor's-Workspace~1b600c3e-d3f0-48ab-844c-8ed0d9d4422b/collection/45337239-6cc5e124-2c3e-4f25-b9e6-012423b46d50?action=share&source=collection_link&creator=45337239"
+	},
+	"item": [
+		{
+			"name": "Login - AVI LB",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"root@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://35.200.176.139/login",
+					"protocol": "https",
+					"host": [
+						"35",
+						"200",
+						"176",
+						"139"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login - AVI LB",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"root@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://35.200.176.139/login",
+							"protocol": "https",
+							"host": [
+								"35",
+								"200",
+								"176",
+								"139"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 15:44:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6533"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "csrftoken=45aa2cd28e28d252967b00d02a895bb1; Path=/; Max-Age=31449600; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "avi-sessionid=3610fcd84d6322e8ecc44b7106ea274f; Path=/; Expires=Fri, 06 Jun 2025 15:44:33 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=3610fcd84d6322e8ecc44b7106ea274f; Path=/; Expires=Fri, 06 Jun 2025 15:44:33 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "accesstoken=None; Path=/; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "refreshtoken=None; Path=/; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "5e742fafbafc48f30f9cb03b799b2238"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With,X-Avi-Tenant,X-Avi-UserAgent,X-Avi-Tenant-UUID,X-CSRFToken,X-PORTAL-AUTHTOKEN"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:;"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "X-NEXT-CALL"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"controller\": {\n        \"api_idle_timeout\": 15\n    },\n    \"session_cookie_name\": \"avi-sessionid\",\n    \"system_config\": {\n        \"common_criteria_mode\": false,\n        \"default_license_tier\": \"ENTERPRISE_WITH_CLOUD_SERVICES\",\n        \"dns_configuration\": {\n            \"search_domain\": \"\"\n        },\n        \"docker_mode\": false,\n        \"email_configuration\": {\n            \"disable_tls\": false,\n            \"from_email\": \"admin@avicontroller.net\",\n            \"mail_server_name\": \"localhost\",\n            \"mail_server_port\": 25,\n            \"smtp_type\": \"SMTP_LOCAL_HOST\"\n        },\n        \"enable_cors\": false,\n        \"fips_mode\": false,\n        \"global_tenant_config\": {\n            \"se_in_provider_context\": true,\n            \"tenant_access_to_provider_se\": true,\n            \"tenant_vrf\": false\n        },\n        \"host_key_algorithm_exclude\": \"\",\n        \"kex_algorithm_exclude\": \"\",\n        \"ntp_configuration\": {\n            \"ntp_servers\": [\n                {\n                    \"server\": {\n                        \"addr\": \"0.us.pool.ntp.org\",\n                        \"type\": \"DNS\"\n                    }\n                },\n                {\n                    \"server\": {\n                        \"addr\": \"1.us.pool.ntp.org\",\n                        \"type\": \"DNS\"\n                    }\n                },\n                {\n                    \"server\": {\n                        \"addr\": \"2.us.pool.ntp.org\",\n                        \"type\": \"DNS\"\n                    }\n                },\n                {\n                    \"server\": {\n                        \"addr\": \"3.us.pool.ntp.org\",\n                        \"type\": \"DNS\"\n                    }\n                }\n            ]\n        },\n        \"portal_configuration\": {\n            \"allow_basic_authentication\": false,\n            \"api_force_timeout\": 24,\n            \"disable_remote_cli_shell\": false,\n            \"disable_swagger\": false,\n            \"enable_clickjacking_protection\": true,\n            \"enable_http\": true,\n            \"enable_https\": true,\n            \"minimum_password_length\": 8,\n            \"password_strength_check\": true,\n            \"redirect_to_https\": true,\n            \"sslkeyandcertificate_refs\": [\n                \"https://35.200.176.139/api/sslkeyandcertificate/sslkeyandcertificate-c4d301eb-0a1e-497d-8783-37715d35199e\",\n                \"https://35.200.176.139/api/sslkeyandcertificate/sslkeyandcertificate-cf4df7ca-e006-43ad-92c7-dce769a44c56\"\n            ],\n            \"sslprofile_ref\": \"https://35.200.176.139/api/sslprofile/sslprofile-40326a61-bbb9-4516-a50b-6b9277f84842\",\n            \"use_uuid_from_input\": false\n        },\n        \"rekey_time_limit\": \"none\",\n        \"rekey_volume_limit\": \"default\",\n        \"secure_channel_configuration\": {\n            \"sslkeyandcertificate_refs\": [\n                \"https://35.200.176.139/api/sslkeyandcertificate/sslkeyandcertificate-edc64aed-7727-4575-a1c0-171f63d72f58\"\n            ]\n        },\n        \"ssh_ciphers\": [\n            \"aes128-ctr\",\n            \"aes256-ctr\"\n        ],\n        \"ssh_hmacs\": [\n            \"hmac-sha2-512-etm@openssh.com\",\n            \"hmac-sha2-256-etm@openssh.com\",\n            \"hmac-sha2-512\"\n        ],\n        \"url\": \"https://35.200.176.139/api/systemconfiguration\",\n        \"uuid\": \"default\",\n        \"welcome_workflow_complete\": false\n    },\n    \"tenants\": [\n        {\n            \"config_settings\": {\n                \"se_in_provider_context\": true,\n                \"tenant_access_to_provider_se\": true,\n                \"tenant_vrf\": false\n            },\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"Piyush Poddar\",\n            \"url\": \"https://35.200.176.139/api/tenant/tenant-69be04f7-7248-4a1b-9af3-ec78c95cec34\",\n            \"uuid\": \"tenant-69be04f7-7248-4a1b-9af3-ec78c95cec34\"\n        },\n        {\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"admin\",\n            \"url\": \"https://35.200.176.139/api/tenant/admin\",\n            \"uuid\": \"admin\"\n        },\n        {\n            \"config_settings\": {\n                \"se_in_provider_context\": true,\n                \"tenant_access_to_provider_se\": true,\n                \"tenant_vrf\": false\n            },\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"hiring\",\n            \"url\": \"https://35.200.176.139/api/tenant/tenant-63c2a23a-66f4-4f65-b466-107c010b19fa\",\n            \"uuid\": \"tenant-63c2a23a-66f4-4f65-b466-107c010b19fa\"\n        },\n        {\n            \"config_settings\": {\n                \"se_in_provider_context\": true,\n                \"tenant_access_to_provider_se\": true,\n                \"tenant_vrf\": false\n            },\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"nirmala chowdhury-tenant_1\",\n            \"url\": \"https://35.200.176.139/api/tenant/tenant-8b1badc0-4cd5-4018-85f8-1c92dec99b69\",\n            \"uuid\": \"tenant-8b1badc0-4cd5-4018-85f8-1c92dec99b69\"\n        },\n        {\n            \"config_settings\": {\n                \"se_in_provider_context\": true,\n                \"tenant_access_to_provider_se\": true,\n                \"tenant_vrf\": false\n            },\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"Anish\",\n            \"url\": \"https://35.200.176.139/api/tenant/tenant-3beb75a5-f23a-4e8c-b821-c05f1f51cd5f\",\n            \"uuid\": \"tenant-3beb75a5-f23a-4e8c-b821-c05f1f51cd5f\"\n        },\n        {\n            \"config_settings\": {\n                \"se_in_provider_context\": true,\n                \"tenant_access_to_provider_se\": true,\n                \"tenant_vrf\": false\n            },\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"Anish pk\",\n            \"url\": \"https://35.200.176.139/api/tenant/tenant-bba1cbcc-7281-46d8-85af-560d15e9ab1d\",\n            \"uuid\": \"tenant-bba1cbcc-7281-46d8-85af-560d15e9ab1d\"\n        },\n        {\n            \"config_settings\": {\n                \"se_in_provider_context\": true,\n                \"tenant_access_to_provider_se\": true,\n                \"tenant_vrf\": false\n            },\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"Anish kodancha\",\n            \"url\": \"https://35.200.176.139/api/tenant/tenant-d4d0fa84-c30f-44d8-923e-1b2fbc826cbc\",\n            \"uuid\": \"tenant-d4d0fa84-c30f-44d8-923e-1b2fbc826cbc\"\n        },\n        {\n            \"config_settings\": {\n                \"se_in_provider_context\": true,\n                \"tenant_access_to_provider_se\": true,\n                \"tenant_vrf\": false\n            },\n            \"enforce_label_group\": false,\n            \"local\": true,\n            \"name\": \"Piyush\",\n            \"url\": \"https://35.200.176.139/api/tenant/tenant-fecac289-1a9a-4e27-bf9b-047be3b5adfd\",\n            \"uuid\": \"tenant-fecac289-1a9a-4e27-bf9b-047be3b5adfd\"\n        }\n    ],\n    \"user\": {\n        \"default_tenant_ref\": \"https://35.200.176.139/api/tenant/admin\",\n        \"email\": \"\",\n        \"full_name\": \"System Administrator\",\n        \"is_superuser\": true,\n        \"local\": true,\n        \"name\": \"admin\",\n        \"ui_property\": \"{\\\"timeframe\\\":\\\"6h\\\",\\\"valuesToDisplay\\\":\\\"avg\\\",\\\"showNewVsLogsPage\\\":false,\\\"useUTCTime\\\":false,\\\"language\\\":\\\"en_US\\\",\\\"logs\\\":{\\\"savedSearch\\\":[]},\\\"appDashboard\\\":{\\\"viewType\\\":\\\"list\\\"},\\\"grid\\\":{\\\"pageSize\\\":30}}\",\n        \"username\": \"admin\",\n        \"uuid\": \"user-1\"\n    },\n    \"user_initialized\": true,\n    \"version\": {\n        \"Date\": \"2025-03-30 00:58:43 UTC\",\n        \"Product\": \"controller\",\n        \"ProductName\": \"Avi Cloud Controller\",\n        \"Tag\": \"30.2.3-9116-20250330.005843\",\n        \"Version\": \"30.2.3\",\n        \"build\": 9116,\n        \"min_version\": \"20.1.1\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "vCenter-Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "{{csrftoken}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Avi-Version",
+						"value": "30.2.3",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "https://35.200.176.139/",
+						"type": "text"
+					},
+					{
+						"key": "X-Avi-Tenant",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{sessionid}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"vcenter-cloud-nirmalawrk\",\r\n  \"vtype\": \"CLOUD_VCENTER\",\r\n  \"tenant_ref\": \"https://35.200.176.139/api/tenant/admin\",\r\n  \"vcenter_configuration\": {\r\n    \"datacenter\": \"Dummy-DC1\",\r\n    \"is_nsx_environment\": false,\r\n    \"username\": \"fakeuser1\",\r\n    \"password\": \"dummy\",\r\n    \"privilege\": \"WRITE_ACCESS\",\r\n    \"use_content_lib\": false,\r\n    \"vcenter_url\": \"https://192.0.2.11\"\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://35.200.176.139/api/cloud",
+					"protocol": "https",
+					"host": [
+						"35",
+						"200",
+						"176",
+						"139"
+					],
+					"path": [
+						"api",
+						"cloud"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "vCenter-Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRFToken",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							},
+							{
+								"key": "X-Avi-Version",
+								"value": "30.2.3",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "https://35.200.176.139/",
+								"type": "text"
+							},
+							{
+								"key": "X-Avi-Tenant",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "{{sessionid}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"vcenter-cloud-nirmalawrk\",\r\n  \"vtype\": \"CLOUD_VCENTER\",\r\n  \"tenant_ref\": \"https://35.200.176.139/api/tenant/admin\",\r\n  \"vcenter_configuration\": {\r\n    \"datacenter\": \"Dummy-DC1\",\r\n    \"is_nsx_environment\": false,\r\n    \"username\": \"fakeuser1\",\r\n    \"password\": \"dummy\",\r\n    \"privilege\": \"WRITE_ACCESS\",\r\n    \"use_content_lib\": false,\r\n    \"vcenter_url\": \"https://192.0.2.11\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://35.200.176.139/api/cloud",
+							"protocol": "https",
+							"host": [
+								"35",
+								"200",
+								"176",
+								"139"
+							],
+							"path": [
+								"api",
+								"cloud"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 15:47:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "112"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "avi-sessionid=3610fcd84d6322e8ecc44b7106ea274f; Path=/; Expires=Fri, 06 Jun 2025 15:47:43 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=3610fcd84d6322e8ecc44b7106ea274f; Path=/; Expires=Fri, 06 Jun 2025 15:47:43 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "accesstoken=None; Path=/; Expires=Fri, 06 Jun 2025 15:47:43 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "refreshtoken=None; Path=/; Expires=Fri, 06 Jun 2025 15:47:43 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Unable to resolve hostname https://192.0.2.10 to IP address: lookup https://192.0.2.10: no such host\"\n}"
+				}
+			]
+		},
+		{
+			"name": "bgp_profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "https://35.200.176.139/",
+						"type": "text"
+					},
+					{
+						"key": "X-Avi-Tenant",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "X-Avi-Version",
+						"value": "30.2.3",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRFToken",
+						"value": "{{csrftoken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://35.200.176.139/api/vrfcontext/?exclude=name.in&name.in=management&cloud_ref.uuid=cloud-318d8e4c-993f-4c38-b409-4c01fb9cfef8&sort=name&page_size=30&page=1&include_name=true",
+					"protocol": "https",
+					"host": [
+						"35",
+						"200",
+						"176",
+						"139"
+					],
+					"path": [
+						"api",
+						"vrfcontext",
+						""
+					],
+					"query": [
+						{
+							"key": "exclude",
+							"value": "name.in"
+						},
+						{
+							"key": "name.in",
+							"value": "management"
+						},
+						{
+							"key": "cloud_ref.uuid",
+							"value": "cloud-318d8e4c-993f-4c38-b409-4c01fb9cfef8"
+						},
+						{
+							"key": "sort",
+							"value": "name"
+						},
+						{
+							"key": "page_size",
+							"value": "30"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "include_name",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "bgp_profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "https://35.200.176.139/",
+								"type": "text"
+							},
+							{
+								"key": "X-Avi-Tenant",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "X-Avi-Version",
+								"value": "30.2.3",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRFToken",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://35.200.176.139/api/vrfcontext/?exclude=name.in&name.in=management&cloud_ref.uuid=cloud-318d8e4c-993f-4c38-b409-4c01fb9cfef8&sort=name&page_size=30&page=1&include_name=true",
+							"protocol": "https",
+							"host": [
+								"35",
+								"200",
+								"176",
+								"139"
+							],
+							"path": [
+								"api",
+								"vrfcontext",
+								""
+							],
+							"query": [
+								{
+									"key": "exclude",
+									"value": "name.in"
+								},
+								{
+									"key": "name.in",
+									"value": "management"
+								},
+								{
+									"key": "cloud_ref.uuid",
+									"value": "cloud-318d8e4c-993f-4c38-b409-4c01fb9cfef8"
+								},
+								{
+									"key": "sort",
+									"value": "name"
+								},
+								{
+									"key": "page_size",
+									"value": "30"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "include_name",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 15:34:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1868"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "avi-sessionid=1b76f6597f3aa917e7ff6e345bb7bf37; Path=/; Expires=Fri, 06 Jun 2025 15:34:20 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sessionid=1b76f6597f3aa917e7ff6e345bb7bf37; Path=/; Expires=Fri, 06 Jun 2025 15:34:20 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "accesstoken=None; Path=/; Expires=Fri, 06 Jun 2025 15:34:20 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "refreshtoken=None; Path=/; Expires=Fri, 06 Jun 2025 15:34:20 GMT; Max-Age=86400; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate"
+						},
+						{
+							"key": "X-Request-ID",
+							"value": "1c75683f99916368679d0b30c632008b"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With,X-Avi-Tenant,X-Avi-UserAgent,X-Avi-Tenant-UUID,X-CSRFToken,X-PORTAL-AUTHTOKEN"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:;"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "X-NEXT-CALL"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 2,\n    \"results\": [\n        {\n            \"_last_modified\": \"1747978598827136\",\n            \"bgp_profile\": {\n                \"hold_time\": 180,\n                \"ibgp\": true,\n                \"keepalive_interval\": 60,\n                \"local_as\": 65000,\n                \"send_community\": true,\n                \"shutdown\": false\n            },\n            \"cloud_ref\": \"https://35.200.176.139/api/cloud/cloud-318d8e4c-993f-4c38-b409-4c01fb9cfef8#dummy-vcenter-cloud\",\n            \"lldp_enable\": true,\n            \"name\": \"global\",\n            \"system_default\": true,\n            \"tenant_ref\": \"https://35.200.176.139/api/tenant/admin#admin\",\n            \"url\": \"https://35.200.176.139/api/vrfcontext/vrfcontext-d370ea42-85f9-41a3-995d-da08b860547e#global\",\n            \"uuid\": \"vrfcontext-d370ea42-85f9-41a3-995d-da08b860547e\"\n        },\n        {\n            \"_last_modified\": \"1747976913019646\",\n            \"bfd_profile\": {\n                \"minrx\": 1000,\n                \"mintx\": 1000,\n                \"multi\": 3\n            },\n            \"bgp_profile\": {\n                \"hold_time\": 180,\n                \"ibgp\": true,\n                \"keepalive_interval\": 60,\n                \"local_as\": 65000,\n                \"send_community\": true,\n                \"shutdown\": false\n            },\n            \"cloud_ref\": \"https://35.200.176.139/api/cloud/cloud-318d8e4c-993f-4c38-b409-4c01fb9cfef8#dummy-vcenter-cloud\",\n            \"debugvrfcontext\": {\n                \"command_buffer_interval\": 2,\n                \"command_buffer_size\": 32768\n            },\n            \"internal_gateway_monitor\": {\n                \"disable_gateway_monitor\": false,\n                \"gateway_monitor_failure_threshold\": 10,\n                \"gateway_monitor_interval\": 1000,\n                \"gateway_monitor_success_threshold\": 15\n            },\n            \"lldp_enable\": true,\n            \"name\": \"hiring-2\",\n            \"system_default\": false,\n            \"tenant_ref\": \"https://35.200.176.139/api/tenant/admin#admin\",\n            \"url\": \"https://35.200.176.139/api/vrfcontext/vrfcontext-1f2356d5-763b-4fd6-99b6-202caa3c21d4#hiring-2\",\n            \"uuid\": \"vrfcontext-1f2356d5-763b-4fd6-99b6-202caa3c21d4\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "sessionid",
+			"value": "8a92c9a79feb827bb3074971831da059",
+			"type": "string"
+		},
+		{
+			"key": "csrftoken",
+			"value": "3cae27b09696f856a6a8c407b0e4245e",
+			"type": "string"
+		}
+	]
+}

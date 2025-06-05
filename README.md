@@ -18,3 +18,11 @@ This script retrives the **BGP_Profile** through the **/api/vrfcontext** endpoin
 - Access to AVI Load Balancer Controller (e.g., `https://35.200.176.139/`)
 
 ---
+
+## Constraints
+
+- No Real BGP Peering Possible
+Since the dummy vCenter cloud uses fake values and has no real upstream peer routers, enabling BGP in VRF context results only in a logical configuration — no actual BGP session.
+
+- Dummy vCenter Credentials Cannot Simulate Real Integration
+While trying to save a dummy vCenter cloud in the UI, due to backend validation (e.g., during API POST) the connection is failing while using IPs like: 192.0.2.10, 192.0.2.11 or 198.51.100.10 ( the controller is attempting to authenticate or resolve resources)
